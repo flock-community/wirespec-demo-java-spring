@@ -1,14 +1,15 @@
 package com.example.demo;
 
+import community.flock.wirespec.generated.CreateTodoEndpoint;
 import community.flock.wirespec.generated.GetTodoEndpoint;
-import community.flock.wirespec.generated.TodoDto;
 import community.flock.wirespec.integration.spring.java.client.WirespecWebClient;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.concurrent.CompletableFuture;
 
 @Service
-public class TodoService implements GetTodoEndpoint.Handler {
+public class TodoService {
 
     private final WirespecWebClient webClient;
 
@@ -16,8 +17,11 @@ public class TodoService implements GetTodoEndpoint.Handler {
         this.webClient = webClient;
     }
 
-    @Override
-    public CompletableFuture<GetTodoEndpoint.Response<?>> getTodo(GetTodoEndpoint.Request request) {
-        return webClient.send(request);
+    public CompletableFuture<GetTodoEndpoint.Response<?>> getById(long id) {
+        return webClient.send(new GetTodoEndpoint.Request(id));
+    }
+
+    public CompletableFuture<GetTodoEndpoint.Response<?>> createTodo(long id) {
+        return webClient.send(new CreateTodoEndpoint.Request("",""));
     }
 }

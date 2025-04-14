@@ -2,6 +2,19 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
+    <repositories>
+        <repository>
+            <id>local-maven</id>
+            <url>file://${user.home}/.m2/repository</url>
+        </repository>
+        <repository>
+            <id>central</id>
+            <url>https://repo1.maven.org/maven2</url>
+        </repository>
+    </repositories>
+
+
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -48,7 +61,13 @@
         <dependency>
             <groupId>community.flock.wirespec.integration</groupId>
             <artifactId>spring-jvm</artifactId>
-            <version>0.13.1</version>
+<!--            <version>0.13.1</version>-->
+            <version>0.0.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webflux</artifactId>
+            <version>6.2.3</version>
         </dependency>
     </dependencies>
 
@@ -81,7 +100,8 @@
             <plugin>
                 <groupId>community.flock.wirespec.plugin.maven</groupId>
                 <artifactId>wirespec-maven-plugin</artifactId>
-                <version>0.13.1</version>
+                <version>0.0.0-SNAPSHOT</version>
+<!--                <version>0.13.1</version>-->
                 <executions>
                     <execution>
                         <id>java</id>
