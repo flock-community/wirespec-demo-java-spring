@@ -1,1 +1,3 @@
-# wirespec-demo-java-spring
+# Wirespec Java Spring Demo
+
+Tbd
