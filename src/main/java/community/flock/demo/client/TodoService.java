@@ -1,9 +1,8 @@
-package com.example.demo;
+package community.flock.demo.client;
 
 import community.flock.wirespec.generated.CreateTodoEndpoint;
 import community.flock.wirespec.generated.GetTodoEndpoint;
 import community.flock.wirespec.integration.spring.java.client.WirespecWebClient;
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.concurrent.CompletableFuture;

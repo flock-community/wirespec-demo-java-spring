@@ -1,5 +1,6 @@
-package com.example.demo;
+package community.flock.demo;
 
+import community.flock.demo.client.TodoService;
 import community.flock.wirespec.generated.GetTodoEndpoint;
 import community.flock.wirespec.generated.GetUserEndpoint;
 import lombok.RequiredArgsConstructor;

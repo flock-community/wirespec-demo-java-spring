@@ -1,4 +1,4 @@
-package com.example.demo;
+package community.flock.demo.provider;
 
 import community.flock.wirespec.generated.GetTodoEndpoint;
 import community.flock.wirespec.generated.TodoDto;
